@@ -1,0 +1,133 @@
+---
+import LogoTiyay from "@/assets/LogoTiyay.svg";
+import IconWhatsApp from "@/assets/IconWhatsApp.svg";
+import IconCall from "@/assets/IconCall.svg";
+import IconHamburguesa from "@/assets/IconHamburguesa.svg";
+import IconApps from "@/assets/IconApps.svg";
+import IconHome from "@/assets/IconHome.svg";
+import ImgDisenoWeb from "@/assets/ImgDisenoWeb.png";
+import ImgLandingPage from "@/assets/ImgLandingPage.png";
+import ImgEcommerce from "@/assets/ImgComercioElectronico.png";
+import IconTriangle from "@/assets/IconTriangle.svg";
+import IconServices from "@/assets/IconServices.svg";
+import { Image } from "astro:assets";
+---
+
+<header
+  class="w-full shadow-xl flex px-5 py-2 items-center gap-7 h-20 relative"
+>
+  <a
+    href="#"
+    class="uppercase lg:hidden flex items-center gap-3 font-montserrat
+text-xl"
+    ><LogoTiyay class="w-13" />tiyay digital group
+  </a>
+  <label for="btnhumberguesa" class="ml-auto flex lg:hidden"
+    ><IconHamburguesa /></label
+  >
+  <input
+    type="checkbox"
+    name="btnhumberguesa"
+    id="btnhumberguesa"
+    class="hidden peer"
+  />
+  <nav
+    class="hidden lg:flex w-full peer-checked:bg-white peer-checked:flex peer-checked:absolute peer-checked:left-0 peer-checked:top-0 peer-checked:[&>ol]:flex-col peer-checked:w-85 peer-checked:h-screen peer-checked:px-5 peer-checked:py-2 peer-checked:shadow-2xl peer-checked:[&>ol>div]:flex-col peer-checked:[&>ol>div]:m-0"
+  >
+    <ol class="flex lg:items-center gap-5 font-poppins w-full">
+      <li>
+        <a
+          href="#"
+          class="uppercase flex items-center gap-3 font-montserrat
+          text-xl"
+          ><LogoTiyay class="w-13" />tiyay digital group
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          class="flex text-lg lg:text-base font-semibold lg:font-normal gap-2 "
+          ><IconHome class="flex lg:hidden w-6 h-6" /><span>Inicio</span></a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          class="flex text-lg lg:text-base font-semibold lg:font-normal gap-2"
+          ><IconApps class="flex lg:hidden w-6 h-6" /><span>Portafolio</span></a
+        >
+      </li>
+      <ol class="lg:hover:[&>div]:block">
+        <a
+          href="#"
+          class="flex text-lg lg:text-base font-semibold lg:font-normal gap-2"
+          ><IconServices class="flex lg:hidden w-6 h-6" /><span
+            >Nuestros Servicios</span
+          ></a
+        >
+
+        <div
+          class="block lg:hidden lg:absolute lg:top-13 lg:bg-white lg:w-120 lg:rounded-lg lg:shadow-2xl"
+        >
+          <li class="flex px-3 py-2 items-center gap-4">
+            <Image
+              src={ImgDisenoWeb}
+              class="w-20"
+              alt="Diseño Web"
+            />
+            <div class="flex flex-col gap-2">
+              <h2 class="font-semibold text-sm lg:text-base">Diseño de Pagina Web</h2>
+              <span class="text-xs hidden lg:block"
+                >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Molestias doloremque numquam veniam</span
+              >
+            </div>
+          </li>
+          <li class="flex px-3 py-2 items-center gap-4">
+            <Image
+              src={ImgLandingPage}
+              class="w-20"
+              alt="Diseño Web"
+            />
+            <div class="flex flex-col gap-2">
+              <h2 class="font-semibold text-sm lg:text-base">Diseño de Landing Page</h2>
+              <span class="text-xs hidden lg:block"
+                >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Molestias doloremque numquam veniam</span
+              >
+            </div>
+          </li>
+          <li class="flex px-3 py-2 items-center gap-4">
+            <Image
+              src={ImgEcommerce}
+              class="w-20"
+              alt="Diseño Web"
+            />
+            <div class="flex flex-col gap-2">
+              <h2 class="font-semibold text-sm lg:text-base">Diseño de Tiendas Online</h2>
+              <span class="text-xs hidden lg:block"
+                >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Molestias doloremque numquam veniam</span
+              >
+            </div>
+          </li>
+        </div>
+      </ol>
+
+      <div
+        class="flex ml-auto gap-3 peer-checked:flex-col peer-checked:ml-auto"
+      >
+        <a
+          href="#"
+          class="flex item-center px-2 py-3 bg-[#4FCE5D] rounded-lg text-white gap-2 justify-center lg:justify-start hover:scale-105 transition-all"
+          ><IconWhatsApp class="" />Escribenos por WhatsApp</a
+        >
+        <a
+          href="#"
+          class="flex item-center px-2 py-3 bg-[#006AF6] rounded-lg text-white gap-2 justify-center lg:justify-start hover:scale-105 transition-all"
+          ><IconCall />Agenda una Llamada</a
+        >
+      </div>
+    </ol>
+  </nav>
+</header>
