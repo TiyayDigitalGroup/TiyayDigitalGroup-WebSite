@@ -1,0 +1,57 @@
+---
+import ImgZoom from "@/assets/ImgZoom.png";
+import ImgCotizacion from "@/assets/ImgCotizacion.png";
+import ImgTerminado from "@/assets/ImgTerminado.png";
+import ImgDesarrollo from "@/assets/ImgDesarrollo.png";
+import { Image } from "astro:assets";
+
+const pasos = [
+  {
+    title: "Reunion por Zoom",
+    img: ImgZoom,
+    descripcion:
+      "Profundizamos en tus necesidades y objetivos para definir la solución perfecta.",
+  },
+  {
+    title: "Cotizamos",
+    img: ImgCotizacion,
+    descripcion:
+      "Te enviamos un presupuesto claro, detallado y adaptado a tu bolsillo en minutos.",
+  },
+  {
+    title: "Desarrollo a Medida",
+    img: ImgDesarrollo,
+    descripcion:
+      "Diseñamos y programamos tu página según lo acordado, con entregas parciales para tu aprobación.",
+  },
+  {
+    title: "Proyecto Completado",
+    img: ImgTerminado,
+    descripcion:
+      "Publicamos tu web y te capacitamos para que la gestiones con total autonomía y confianza.",
+  },
+];
+---
+
+<div class="flex flex-col items-center gap-8 mt-10">
+  <div>
+    <h1 class="text-4xl font-bold text-center">
+      Nuestra metodología de trabajo
+    </h1>
+    <p class="mt-3">
+      A tu lado en cada etapa, desde el concepto inicial hasta el lanzamiento,
+      garantizamos entregables singulares y funcionales.
+    </p>
+  </div>
+  <section class="bg-[#E6F2F1] px-4 py-8 flex gap-5 justify-center w-full">
+    {
+      pasos.map((item) => (
+        <div class="bg-white max-w-70 rounded-xl px-6 py-5">
+          <h2 class="text-xl font-poppins">{item.title}</h2>
+          <Image src={item.img} alt={item.title} />
+          <p class="text-xs text-black/50 text-center">{item.descripcion}</p>
+        </div>
+      ))
+    }
+  </section>
+</div>

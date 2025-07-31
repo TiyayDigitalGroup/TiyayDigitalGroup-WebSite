@@ -1,0 +1,62 @@
+---
+import ImgDiseñoWeb from "@/assets/ImgDisenoWeb.png";
+import ImgLandingPage from "@/assets/ImgLandingPage.png";
+import ImgEcommerce from "@/assets/ImgComercioElectronico.png";
+import Image from "astro/components/Image.astro";
+
+const servicios = [
+  {
+    title: "Desarrollo de Sitios Web",
+    img: ImgDiseñoWeb,
+    descripcion:
+      "Diseñamos sitios web de alto impacto que inspiran confianza y ponen en valor lo mejor de tu empresa",
+    link: "#",
+  },
+  {
+    title: "Landing Page",
+    img: ImgLandingPage,
+    descripcion:
+      "Creamos páginas de aterrizaje que captan la atención, recopilan prospectos y maximizan tus conversiones.",
+    link: "#",
+  },
+  {
+    title: "Comercio Electronico",
+    img: ImgEcommerce,
+    descripcion:
+      "Creamos tu tienda digital moderna, con pasarela de pago integrada y procesos de venta automatizados.",
+    link: "#",
+  },
+];
+---
+
+<div class="flex flex-col items-center gap-8">
+  <div>
+    <h1 class="text-4xl font-bold text-center">¿Qué necesita tu negocio?</h1>
+    <p class="mt-3">
+      Descubre nuestras soluciones y herramientas digitales para impulsar el
+      crecimiento de tu empresa.
+    </p>
+  </div>
+
+  <section class="flex gap-5">
+    {
+      servicios.map((servicio) => (
+        <div class="bg-[#C0F6F814] border max-w-96 rounded-xl flex flex-col justify-center gap-5 px-2 py-4">
+          <Image
+            src={servicio.img}
+            alt="Imagen de Diseño Web"
+            class="w-70 mx-auto"
+          />
+          <h2 class="text-2xl font-bold font-poppins">{servicio.title}</h2>
+          <p class="text-black/50">{servicio.descripcion}</p>
+          <a
+            href={servicio.link}
+            class="py-2 px-4 w-[40%] bg-black text-white rounded-r-full"
+          >
+            Ver Servicios
+          </a>
+        </div>
+      ))
+    }
+  </section>
+</div>

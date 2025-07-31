@@ -1,0 +1,29 @@
+---
+import ImgBanner1 from "@/assets/ImgBanner1.png";
+import IconPeru from "@/assets/IconPeru.svg";
+import IconMexico from "@/assets/IconMexico.svg";
+import IconVenezuela from "@/assets/IconVenezuela.svg";
+import IconArgentina from "@/assets/IconArgentina.svg";
+import ImgBanner1Movil from "@/assets/ImgBanner1-Movil.webp";
+import { Image } from "astro:assets";
+---
+
+<div class="pt-40 flex items-center justify-center flex-col gap-5">
+  <Image src={ImgBanner1} alt="Banner 1" class="object-contain hidden lg:block w-[90%] "/>
+  <Image src={ImgBanner1Movil} alt="Banner 1" class="object-cover block lg:hidden w-[90%] h-140 rounded-2xl"/>
+  
+  <div class="grid md:grid-cols-3 items-center gap-10 grid-rows-2 w-[90%]">
+    <h2 class="col-span-1 text-xl lg:text-3xl ">
+      Impulsamos negocios <br />
+      <strong>en toda Latinoamérica</strong>
+    </h2>
+    <div class="flex col-span-2 gap-5">
+      <IconPeru/>
+      <IconMexico/>
+      <IconVenezuela/>
+      <IconArgentina/>
+      <IconPeru/>
+      <IconMexico/>
+    </div>
+  </div>
+</div>
