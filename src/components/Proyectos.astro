@@ -1,0 +1,50 @@
+---
+import Image from "astro/components/Image.astro";
+import ImgRampal from "@/assets/ImgRampal.png";
+
+const proyectos = [
+  {
+    nombre: "rampal contadores",
+    descripcion:
+      "Una consultora legal que ofrece asesoría especializada y soluciones jurídicas a medida para proteger tus intereses.",
+  },
+  {
+    nombre: "luxuris dental",
+    descripcion:
+      "Especialidades odontológicas, explora casos reales y agenda tu cita  para conseguir la sonrisa que siempre has deseado.",
+  },
+  {
+    nombre: "arnold christ",
+    descripcion:
+      "Descubre en nuestra web las áreas de práctica, casos de éxito y cómo agendar tu asesoría legal personalizada.",
+  },
+  {
+    nombre: "Finance Class",
+    descripcion:
+      "Plataforma especializada en recursos educativos para profesores y alumnos",
+  },
+];
+---
+
+<div class="flex flex-col items-center gap-8 my-10">
+  <div>
+    <h1 class="text-4xl font-bold text-center">Excelencia en cada proyecto</h1>
+    <p class="mt-3">
+      Descubre ejemplos de nuestro trabajo, fruto de la innovación y el
+      compromiso.
+    </p>
+  </div>
+  <section class="grid grid-cols-2 max-w-5xl items-center">
+    <div class="flex flex-col gap-5 w-96">
+      {
+        proyectos.map((item) => (
+          <div class="">
+            <h1 class="capitalize text-[#35C2DC] font-bold font-poppins text-2xl">{item.nombre}</h1>
+            <p class="text-xs text-black/50">{item.descripcion}</p>
+          </div>
+        ))
+      }
+    </div>
+    <Image src={ImgRampal} alt="ImgRampal" />
+  </section>
+</div>

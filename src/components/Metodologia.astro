@@ -7,25 +7,29 @@ import { Image } from "astro:assets";
 
 const pasos = [
   {
+    id:1,
     title: "Reunion por Zoom",
     img: ImgZoom,
     descripcion:
       "Profundizamos en tus necesidades y objetivos para definir la solución perfecta.",
   },
   {
+    id:2,
     title: "Cotizamos",
     img: ImgCotizacion,
     descripcion:
       "Te enviamos un presupuesto claro, detallado y adaptado a tu bolsillo en minutos.",
   },
   {
+    id:3,
     title: "Desarrollo a Medida",
     img: ImgDesarrollo,
     descripcion:
       "Diseñamos y programamos tu página según lo acordado, con entregas parciales para tu aprobación.",
   },
   {
-    title: "Proyecto Completado",
+    id:4,
+    title: "Proyecto Terminado",
     img: ImgTerminado,
     descripcion:
       "Publicamos tu web y te capacitamos para que la gestiones con total autonomía y confianza.",
@@ -46,8 +50,8 @@ const pasos = [
   <section class="bg-[#E6F2F1] px-4 py-8 flex gap-5 justify-center w-full">
     {
       pasos.map((item) => (
-        <div class="bg-white max-w-70 rounded-xl px-6 py-5">
-          <h2 class="text-xl font-poppins">{item.title}</h2>
+        <div class="bg-white max-w-70 rounded-xl px-4 py-5">
+          <h2 class="text-xl font-poppins flex gap-2"><span class="bg-cyan-500 flex w-5 rounded-md items-center justify-center font-black text-white">{item.id}</span>{item.title}</h2>
           <Image src={item.img} alt={item.title} />
           <p class="text-xs text-black/50 text-center">{item.descripcion}</p>
         </div>

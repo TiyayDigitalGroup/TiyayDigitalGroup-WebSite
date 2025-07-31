@@ -1,0 +1,34 @@
+---
+import ImgAntesDespues from "@/assets/ImgAntesDespues.png";
+import Image from "astro/components/Image.astro";
+---
+
+<div class="flex flex-col items-center gap-8 my-10">
+  <div>
+    <h1 class="text-4xl font-bold text-center">
+      ¿Ya cuentas con un sitio online?
+    </h1>
+    <p class="mt-3 mx-60 text-center">
+      Si crees que necesita un aire nuevo, nosotros lo modernizamos,
+      embellecemos y optimizamos. Mira cómo pasamos de un “antes” desfasado a un
+      “después” que realmente marque la diferencia.
+    </p>
+  </div>
+  <section class="flex gap-30">
+    <Image
+      src={ImgAntesDespues}
+      alt="ImgAntesDespues"
+      class="w-90 object-contain"
+    />
+    <Image
+      src={ImgAntesDespues}
+      alt="ImgAntesDespues"
+      class="w-90 object-contain"
+    />
+  </section>
+  <div class="w-10/13 px-10 py-5 rounded-xl bg-[#4168E9] flex flex-col items-center gap-4">
+    <h2 class="font-poppins text-3xl font-semibold text-white">Cuéntanos tu proyecto y agendemos una charla</h2>
+    <p class=" text-white/80">Obtén tu presupuesto y pon en marcha tu idea hoy mismo.</p>
+    <a href="#" class="bg-[#1D2A42] px-7 py-3 rounded-lg text-white font-medium text-lg">Solicitar Cotización</a>
+  </div>
+</div>
