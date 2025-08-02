@@ -8,21 +8,22 @@ import IconHome from "@/assets/IconHome.svg";
 import ImgDisenoWeb from "@/assets/ImgDisenoWeb.png";
 import ImgLandingPage from "@/assets/ImgLandingPage.png";
 import ImgEcommerce from "@/assets/ImgComercioElectronico.png";
-import IconTriangle from "@/assets/IconTriangle.svg";
 import IconServices from "@/assets/IconServices.svg";
 import { Image } from "astro:assets";
 ---
 
 <header
-  class="w-full shadow-xl flex px-5 py-2 items-center gap-7 h-20 bg-white fixed"
+  class="w-full shadow-xl flex px-5 py-2 lg:items-center max-h-20 h-full bg-white fixed"
 >
-  <a
-    href="#"
-    class="uppercase lg:hidden flex items-center gap-3 font-montserrat
-text-xl"
-    ><LogoTiyay class="w-13" />tiyay digital group
-  </a>
-  <label for="btnhumberguesa" class="ml-auto flex lg:hidden"
+  <h1 class="lg:hidden">
+    <a
+      href="#"
+      class="uppercase font-montserrat flex items-center gap-2 text-xl"
+      ><LogoTiyay class="w-13" /><h1>tiyay digital group</h1></a
+    >
+  </h1>
+
+  <label for="btnhumberguesa" class="ml-auto flex lg:hidden items-center"
     ><IconHamburguesa /></label
   >
   <input
@@ -31,103 +32,111 @@ text-xl"
     id="btnhumberguesa"
     class="hidden peer"
   />
-  <nav
-    class="hidden lg:flex w-full peer-checked:bg-white peer-checked:flex peer-checked:absolute peer-checked:left-0 peer-checked:top-0 peer-checked:[&>ol]:flex-col peer-checked:w-85 peer-checked:h-screen peer-checked:px-5 peer-checked:py-2 peer-checked:shadow-2xl peer-checked:[&>ol>div]:flex-col peer-checked:[&>ol>div]:m-0"
-  >
-    <ol class="flex lg:items-center gap-5 font-poppins w-full">
+  <nav class="lg:w-full peer-checked:[&>ol]:left-0 ">
+    <ol
+      class="flex gap-3 w-full flex-row h-full max-lg:flex-col bg-white max-lg:h-screen max-lg:w-85 max-lg:absolute top-0 -left-90 max-lg:px-5 max-lg:py-2 max-lg:shadow-2xl transition-all duration-300"
+    >
       <li>
         <a
           href="#"
-          class="uppercase flex items-center gap-3 font-montserrat
-          text-xl"
-          ><LogoTiyay class="w-13" />tiyay digital group
-        </a>
-      </li>
-      <li>
-        <a
-          href="#"
-          class="flex text-lg lg:text-base font-semibold lg:font-normal gap-2 "
-          ><IconHome class="flex lg:hidden w-6 h-6" /><span>Inicio</span></a
+          class="uppercase font-montserrat flex items-center gap-2 text-xl"
+          ><LogoTiyay class="w-13" /><h1>tiyay digital group</h1></a
         >
       </li>
-      <li>
-        <a
-          href="#"
-          class="flex text-lg lg:text-base font-semibold lg:font-normal gap-2"
-          ><IconApps class="flex lg:hidden w-6 h-6" /><span>Portafolio</span></a
-        >
-      </li>
-      <ol class="lg:hover:[&>div]:block">
-        <a
-          href="#"
-          class="flex text-lg lg:text-base font-semibold lg:font-normal gap-2"
-          ><IconServices class="flex lg:hidden w-6 h-6" /><span
-            >Nuestros Servicios</span
-          ></a
-        >
-
-        <div
-          class="block lg:hidden lg:absolute lg:top-13 lg:bg-white lg:w-120 lg:rounded-lg lg:shadow-2xl"
-        >
-          <li class="flex px-3 py-2 items-center gap-4">
-            <Image
-              src={ImgDisenoWeb}
-              class="w-20"
-              alt="Diseño Web"
-            />
-            <div class="flex flex-col gap-2">
-              <h2 class="font-semibold text-sm lg:text-base">Diseño de Pagina Web</h2>
-              <span class="text-xs hidden lg:block"
-                >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Molestias doloremque numquam veniam</span
+      <ol class="flex gap-3 lg:items-center max-lg:flex-col">
+        <li>
+          <a
+            href="#"
+            class="capitalize hover:text-[#7fb5be] transition-all duration-300 flex max-lg:text-xl gap-2 items-center"
+            ><IconHome class="lg:hidden"/>inicio</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="capitalize hover:text-[#7fb5be] transition-all duration-300 flex max-lg:text-xl gap-2 items-center"
+            ><IconApps class="lg:hidden"/>portafolio</a
+          >
+        </li>
+        <li class="group">
+          <h2
+            class="capitalize flex items-center gap-1 group-hover:text-[#7fb5be] transition-all duration-300 max-lg:text-xl"
+          >
+            nuestro servicios
+            <span
+              class="mt-1 w-2 h-2 border-7 block border-x-transparent border-b-0 lg:group-hover:rotate-180 transition-all duration-500"
+            ></span>
+          </h2>
+          <ol
+            class="lg:invisible lg:opacity-0 lg:translate-y-2 lg:group-hover:visible lg:group-hover:opacity-100 lg:group-hover:translate-y-0
+           lg:absolute top-13 lg:bg-white p-4 rounded-lg lg:shadow-2xl transition-all duration-500"
+          >
+            <li>
+              <a href="#" class="flex items-center gap-2 max-w-md"
+                ><Image
+                  src={ImgDisenoWeb}
+                  alt="ImgDisenoWeb"
+                  class="w-20"
+                /><div class="flex flex-col gap-2">
+                  <h3 class="text-base font-bold font-poppins">
+                    Diseño web
+                  </h3><span class="text-xs/4"
+                    >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Iusto, eaque distinctio! Cupiditate atque exercitationem
+                    ipsa que.</span
+                  >
+                </div></a
               >
-            </div>
-          </li>
-          <li class="flex px-3 py-2 items-center gap-4">
-            <Image
-              src={ImgLandingPage}
-              class="w-20"
-              alt="Diseño Web"
-            />
-            <div class="flex flex-col gap-2">
-              <h2 class="font-semibold text-sm lg:text-base">Diseño de Landing Page</h2>
-              <span class="text-xs hidden lg:block"
-                >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Molestias doloremque numquam veniam</span
+            </li>
+            <li>
+              <a href="#" class="flex items-center gap-2 max-w-md"
+                ><Image
+                  src={ImgDisenoWeb}
+                  alt="ImgDisenoWeb"
+                  class="w-20"
+                /><div class="flex flex-col gap-2">
+                  <h3 class="text-base font-bold font-poppins">
+                    Diseño web
+                  </h3><span class="text-xs/4"
+                    >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Iusto, eaque distinctio! Cupiditate atque exercitationem
+                    ipsa que.</span
+                  >
+                </div></a
               >
-            </div>
-          </li>
-          <li class="flex px-3 py-2 items-center gap-4">
-            <Image
-              src={ImgEcommerce}
-              class="w-20"
-              alt="Diseño Web"
-            />
-            <div class="flex flex-col gap-2">
-              <h2 class="font-semibold text-sm lg:text-base">Diseño de Tiendas Online</h2>
-              <span class="text-xs hidden lg:block"
-                >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Molestias doloremque numquam veniam</span
+            </li>
+            <li>
+              <a href="#" class="flex items-center gap-2 max-w-md"
+                ><Image
+                  src={ImgDisenoWeb}
+                  alt="ImgDisenoWeb"
+                  class="w-20"
+                /><div class="flex flex-col gap-2">
+                  <h3 class="text-base font-bold font-poppins">
+                    Diseño web
+                  </h3><span class="text-xs/4"
+                    >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Iusto, eaque distinctio! Cupiditate atque exercitationem
+                    ipsa que.</span
+                  >
+                </div></a
               >
-            </div>
-          </li>
-        </div>
+            </li>
+          </ol>
+        </li>
       </ol>
-
-      <div
-        class="flex ml-auto gap-3 peer-checked:flex-col peer-checked:ml-auto"
-      >
+      <li class="lg:ml-auto flex gap-3 items-center max-lg:flex-col mt-auto">
         <a
           href="#"
-          class="flex item-center px-2 py-3 bg-[#4FCE5D] rounded-lg text-white gap-2 justify-center lg:justify-start hover:scale-105 transition-all"
-          ><IconWhatsApp class="" />Escribenos por WhatsApp</a
+          class="flex items-center gap-2 bg-[#25D366] rounded-lg p-2 text-white font-poppins h-14 hover:scale-105 transition-all duration-300 max-lg:w-65"
+          ><IconWhatsApp class="h-7 w-7" />Escribenos por WhatsApp</a
         >
         <a
           href="#"
-          class="flex item-center px-2 py-3 bg-[#006AF6] rounded-lg text-white gap-2 justify-center lg:justify-start hover:scale-105 transition-all"
-          ><IconCall />Agenda una Llamada</a
+          class="flex items-center justify-center gap-2 bg-[#006AF6] rounded-lg p-2 text-white font-poppins h-14 hover:scale-105 transition-all duration-300 max-lg:w-65"
+          ><IconCall class="h-6 w-6" />Agenda una Llamada</a
         >
-      </div>
+      </li>
     </ol>
   </nav>
 </header>
