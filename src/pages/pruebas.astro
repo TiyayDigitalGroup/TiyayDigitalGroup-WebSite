@@ -1,10 +1,12 @@
 ---
 import FlagCarousel from "@/components/FlagCarousel.astro"
 import Layout from "../layouts/Layout.astro"
+import ProjectViewer from "@/components/ProjectViewer"
 ---
 
 <Layout>
   <main class="max-w-6xl md:px-4 px-2 mx-auto">
     <FlagCarousel />
+    <ProjectViewer client:visible />
   </main>
 </Layout>
