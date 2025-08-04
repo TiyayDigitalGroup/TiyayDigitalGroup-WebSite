@@ -1,6 +1,7 @@
 ---
 import Image from "astro/components/Image.astro";
 import ImgRampal from "@/assets/ImgRampal.png";
+import ProjectViewer from "./ProjectViewer";
 
 const proyectos = [
   {
@@ -34,18 +35,5 @@ const proyectos = [
       compromiso.
     </p>
   </div>
-  <section class="grid lg:grid-cols-2 max-w-5xl items-center max-lg:gap-4">
-    <div class="flex flex-col gap-5 w-96 m-auto">
-      {
-        proyectos.map((item) => (
-          <div class="">
-            <h1 class="capitalize text-[#35C2DC] font-bold font-poppins text-2xl">{item.nombre}</h1>
-            <p class="text-xs text-black/50">{item.descripcion}</p>
-            <hr class="border-2 mt-2 border-[#2796aa]" />
-          </div>
-        ))
-      }
-    </div>
-    <Image src={ImgRampal} alt="ImgRampal" />
-  </section>
+  <ProjectViewer client:visible/>
 </div>

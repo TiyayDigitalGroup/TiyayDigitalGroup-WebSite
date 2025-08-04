@@ -37,8 +37,8 @@ const ProjectViewer = () => {
   const proyectoActivo = proyectos.find(p => p.nombre === hoveredProject)
 
   return (
-    <section className="flex flex-col md:flex-row items-center gap-4 justify-center">
-      <div className="w-80 shrink-0 flex flex-col gap-5">
+    <section className="grid md:grid-cols-3  items-center justify-center max-w-10/12 gap-10">
+      <div className=" shrink-0 flex flex-col gap-5">
         {proyectos.map((item) => (
           <div
             key={item.nombre}
@@ -54,7 +54,7 @@ const ProjectViewer = () => {
         ))}
       </div>
 
-      <picture className="rounded-lg overflow-hidden aspect-[16/9] border border-[#2796aa] w-full transition-opacity duration-300">
+      <picture className="rounded-lg overflow-hidden aspect-[16/9] border border-[#2796aa] w-full transition-opacity duration-300 md:col-span-2">
         <img
           src={proyectoActivo?.imagen.src}
           alt={hoveredProject}

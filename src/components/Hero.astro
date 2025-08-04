@@ -1,41 +1,12 @@
 ---
 import ImgBanner1 from "@/assets/ImgBanner1.png";
-import IconPeru from "@/assets/IconPeru.png";
-import IconMexico from "@/assets/IconMexico.png";
-import IconEcuador from "@/assets/IconEcuador.png";
-import IconGuatemala from "@/assets/IconGuatemala.png";
 import ImgBanner1Movil from "@/assets/ImgBanner1-Movil.webp";
+import FlagCarousel from "./FlagCarousel.astro";
 import { Image } from "astro:assets";
 
-const paises = [
-  {
-    title: "Icono Peru",
-    img: IconPeru,
-  },
-  {
-    title: "Icono Mexico",
-    img: IconMexico,
-  },
-  {
-    title: "Icono Ecuador",
-    img: IconEcuador,
-  },
-  {
-    title: "Icono Guatemala",
-    img: IconGuatemala,
-  },
-  {
-    title: "Icono Ecuador",
-    img: IconEcuador,
-  },
-  {
-    title: "Icono Guatemala",
-    img: IconGuatemala,
-  },
-];
 ---
 
-<div class="pt-40 flex items-center justify-center flex-col gap-5 w-full max-w-6xl m-auto">
+<div class="pt-40 max-lg:px-10 flex items-center justify-center flex-col gap-5 w-full max-w-6xl m-auto ">
   <Image
     src={ImgBanner1}
     alt="Banner-1"
@@ -44,16 +15,8 @@ const paises = [
   <Image
     src={ImgBanner1Movil}
     alt="Banner 1"
-    class="object-cover block lg:hidden w-10/12 rounded-4xl"
+    class="object-cover block lg:hidden  rounded-4xl"
   />
 
-  <!-- <div class="grid grid-cols-3 items-center gap-10 w-full">
-    <h2 class="col-span-1 text-xl lg:text-3xl">
-      Impulsamos negocios <br />
-      <strong>en toda Latinoamérica</strong>
-    </h2>
-    <div class="flex col-span-2 gap-5">
-      {paises.map((item) => <Image src={item.img} alt={item.title} />)}
-    </div>
-  </div> -->
+  <FlagCarousel />
 </div>

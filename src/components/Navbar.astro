@@ -13,7 +13,7 @@ import { Image } from "astro:assets";
 ---
 
 <header
-  class="w-full shadow-xl flex px-5 py-2 lg:items-center max-h-20 h-full bg-white fixed"
+  class="w-full shadow-xl flex px-5 py-2 lg:items-center max-h-20 h-full bg-white fixed z-50"
 >
   <h1 class="lg:hidden">
     <a
@@ -47,20 +47,20 @@ import { Image } from "astro:assets";
         <li>
           <a
             href="#"
-            class="capitalize hover:text-[#7fb5be] transition-all duration-300 flex max-lg:text-xl gap-2 items-center"
+            class="capitalize hover:text-primary hover:scale-105 transition-all duration-100 flex max-lg:text-xl gap-2 items-center"
             ><IconHome class="lg:hidden"/>inicio</a
           >
         </li>
         <li>
           <a
             href="#"
-            class="capitalize hover:text-[#7fb5be] transition-all duration-300 flex max-lg:text-xl gap-2 items-center"
+            class="capitalize hover:text-primary hover:scale-105 transition-all duration-100 flex max-lg:text-xl gap-2 items-center"
             ><IconApps class="lg:hidden"/>portafolio</a
           >
         </li>
         <li class="group">
           <h2
-            class="capitalize flex items-center gap-1 group-hover:text-[#7fb5be] transition-all duration-300 max-lg:text-xl"
+            class="capitalize flex items-center gap-1 group-hover:text-primary transition-all duration-300 max-lg:text-xl cursor-pointer"
           >
             nuestro servicios
             <span

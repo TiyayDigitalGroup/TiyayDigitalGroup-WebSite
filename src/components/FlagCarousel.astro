@@ -6,7 +6,7 @@ import IconGuatemala from "@/assets/IconGuatemala.png"
 import { Image } from "astro:assets"
 ---
 
-<section class="flex max-md:flex-col md:gap-10 gap-2 items-center">
+<section class="flex max-md:flex-col md:gap-10 gap-2 items-center w-full">
   <div class="xl:text-2xl lg:text-2xl text-lg font-poppins">
     <p>Impulsamos negocios</p>
     <p class="font-bold">en toda Latinoamérica</p>
@@ -25,7 +25,7 @@ import { Image } from "astro:assets"
       <div class="item absolute left-full" style="--position: 4">
         <Image class={"w-full"} src={IconMexico} alt={""} />
       </div>
-      <div class="item absolute left-full" style="--position: 5">
+      <div class="item absolute left-full" style="--position: 5" >
         <Image class={"w-full"} src={IconPeru} alt={""} />
       </div>
       <div class="item absolute left-full" style="--position: 6">
@@ -45,7 +45,7 @@ import { Image } from "astro:assets"
   .slider {
     --width: 65px;
     --height: 65px;
-    --quantity: 6;
+    --quantity: 8;
     height: var(--height);
     mask-image: linear-gradient(
       to right,
@@ -62,10 +62,10 @@ import { Image } from "astro:assets"
   .slider .list .item {
     width: var(--width);
     height: var(--height);
-    animation: autoRun 10s linear infinite;
+    animation: autoRun 12s linear infinite;
     transition: filter 0.5s;
     animation-delay: calc(
-      (10s / var(--quantity)) * (var(--position) - 1) - 10s
+      (12s / var(--quantity)) * (var(--position) - 1) - 12s
     ) !important;
   }
 
@@ -85,7 +85,7 @@ import { Image } from "astro:assets"
 
   @media (width <= 40rem) {
     .slider {
-      --quantity: 5;
+      --quantity: 4;
     }
   }
 </style>

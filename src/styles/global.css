@@ -5,4 +5,5 @@
 @theme {
     --font-montserrat : 'Montserrat Variable';
     --font-poppins: 'Poppins','Times New Roman';
+    --color-primary: #2796aa;
 }
